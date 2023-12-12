@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="lightslider-master/dist/css/lightslider.min.css">
+  <link rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-bundle.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+  <link rel="stylesheet" href="aos-master/dist/aos.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script&family=Kaushan+Script&family=Playfair+Display:ital@1&family=Tapestry&display=swap');
+
+    * {
+      font-family: Martel;
+    }
+
+    .background {
+      background: linear-gradient(rgba(219, 186, 210, 0.3), rgba(172, 43, 133, 0.3)), url(images/hero.jpg);
+      background-size: cover;
+      height: calc(100vh - 70px);
+      background-color: transparent;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .paragraph {
+      width: 70%;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .paragraph h1 {
+      font-size: 4vw;
+    }
+
+    @media(max-width:768px) {
+      .background {
+        background-position: 50% 50%;
+        background-position-x: right;
+      }
+    }
+
+    .carousel-item {
+      height: 400px;
+    }
+
+    .carousel-item img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media(max-width:768px) {
+      .carousel-item {
+        width: 50%;
+      }
+
+      .about {
+        text-align: center;
+      }
+    }
+
+
+    .about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .aboutcontent {
+
+      height: 450px;
+    }
+
+    .content h4 {
+      background-color: rgb(105, 17, 48);
+      color: white;
+    }
+
+    .content p {
+      margin: 10px;
+      font-size: 18px;
+    }
+
+    #imageGallery {
+      height: 100%;
+    }
+
+    #imageGallery li {
+      height: 100%;
+    }
+
+    .img:hover {
+      transform: scale(1.5);
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    .event {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    @media(max-width:768px) {
+      .photo {
+        margin: 10px 0px 0px 0px;
+      }
+
+      .hover {
+        text-align: center;
+      }
+
+      .photo:hover .hover {
+        text-align: center;
+      }
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(114, 124, 131, 0.593);
+      transition: 0.3s;
+      top: -100%;
+      left: 0;
+      overflow: hidden;
+    }
+
+    .photo:hover .hover {
+      top: 0;
+    }
+
+    .factcol {
+      background: url(images/factcol.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin-top: 200px;
+      /* display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center; */
+    }
+
+    #counter {
+      height: 200px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+    }
+
+    #counter .box {
+      padding-top: 30px;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      color: black;
+    }
+
+    @media(max-width:768px) {
+      .counter {
+       margin-top: 480px !important;
+       background-position: 50% 50%;
+      }
+
+      #counter .box {
+        text-align: center;
+        width: 100vw;
+        margin-bottom: 50px;
+      }
+    }
+
+    @media(max-width:700px) {
+      .counter {
+        margin-top:480px !important ;
+       
+      }
+
+      #counter {
+       display: block;
+      }
+    }
+
+    .packages {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .content1 {
+      position: relative;
+      overflow: hidden;
+      height: 500px;
+      color: red;
+      background: linear-gradient(rgba(160, 114, 114, 0.5), rgba(0, 0, 0, 0.5)), url(images/vintag1.jpg);
+      background-size: cover;
+    }
+
+    .content1 p {
+      text-align: center;
+      color: white;
+      margin: 8px;
+      font-size: 20px;
+    }
+
+    .content1 h2 {
+      text-align: center;
+      color: white;
+      margin: 8px;
+      font-size: 35px;
+    }
+
+    .content1 h3 {
+      text-align: center;
+      color: white;
+      margin: 8px;
+      font-size: 35px;
+    }
+
+    @media(max-width:768px) {
+      .packages {
+        background-position: 50% 50%;
+        background-position-x: right;
+      }
+    }
+
+    .gdiv {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: -100%;
+      top: 0;
+      background: rgba(160, 114, 114, 0.5);
+      transition: 0.5s;
+      text-align: center;
+      font-size: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gdiv:hover .overlay {
+      right: 0;
+      color: red;
+    }
+
+    @media(max-width:768px) {
+      .gdiv {
+        margin: 10px 0px 0px 0px;
+      }
+    }
+
+    .team {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+    }
+
+
+    .partner {
+      height: 280px;
+    }
+
+    .ptcol {
+      filter: grayscale(100%);
+      transition: 0.5s;
+    }
+
+    .ptcol:hover {
+      filter: none;
+      transform: scale(1.1);
+    }
+
+    
+
+    .contact {
+      position: relative;
+      height: 300px;
+    }
+
+    @media(max-width:768px) {
+      .contact {
+        margin-top: 400px;
+      }
+    }
+
+    .rightform {
+
+      height: 630px;
+    }
+
+    form,
+    input {
+      width: 100%;
+    }
+
+    input {
+      border-radius: 5px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer {
+
+      height: 450px;
+      display: flex;
+      justify-content: space-evenly;
+      background: rgba(167, 118, 118, 0.5) url(images/home-bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @media(max-width:768px) {
+      .footer{
+        display: flex;
+      }
+    }
+
+    .service .col-md-3 {
+      transition: 0.5s;
+    }
+
+    .service .col-md-3:hover {
+      transform: scale(1.1);
+      color: rgb(105, 17, 48);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background" data-aos="flip-left" data-aos-duration="3000">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <img src="" alt="">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#navbar"
+                style="color: rgb(105, 17, 48); font-size: 25px; letter-spacing: 3px;">HOME</a>
+            </li>
+            &nbsp; &nbsp;
+            <li class="nav-item">
+              <a class="nav-link" href="#about"
+                style="color: rgb(105, 17, 48); font-size: 25px; letter-spacing: 3px;">ABOUT US</a>
+            </li>
+            &nbsp; &nbsp;
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: rgb(105, 17, 48); font-size: 25px; letter-spacing: 3px;">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" style="color: rgb(105, 17, 48); font-size: 15px;" href="#event">EVENT
+                    ATTRACTIONS</a></li>
+                <li><a class="dropdown-item" style="color: rgb(105, 17, 48); font-size: 15px; " href="#packages">
+                    WEDDING STYLE & PRICING</a></li>
+                <li><a class="dropdown-item" style="color: rgb(105, 17, 48); font-size: 15px;" href="#gallery">OUR
+                    PORTFOLIO</a></li>
+                <li><a class="dropdown-item" style="color: rgb(105, 17, 48); font-size: 15px;" href="#review"> CLIENT
+                    REVIEWS</a></li>
+                <li><a class="dropdown-item" style="color: rgb(105, 17, 48); font-size: 15px; " href="#service">OUR
+                    SERVICES</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#team" style="color: rgb(105, 17, 48); font-size: 20px; ">MEET OUR
+                    TEAM</a></li>
+              </ul>
+            </li>
+            &nbsp; &nbsp;
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"
+                style="color: rgb(105, 17, 48); font-size: 25px; letter-spacing: 3px;">CONTACT US</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="paragraph" class="paragraph" data-aos="fade-up-right" data-aos-duration="3000">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1 style=" color: rgb(105, 17, 48);"><b> It's Time To Celebrate!The Best</b><span
+                style=" color: red; font-family: playball;"> <b> Event Organizer</b></span> </h1>
+            <h1 style=" color: rgb(105, 17, 48);"> <b>We Make Every Moment Special!</b> </h1>
+            <a href="#contact"><button class="text-center"
+                style="font-size: 30px; color: black; background: rgb(105, 17, 48); padding: 5px;">CONTACT
+                US</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="flower"><img src="images/flower.png" alt="" height="100px"></div>
+          <h1 style="color: rgb(105, 17, 48);"> <u>ABOUT US</u> </h1>
+          <P class="mt-3" style="font-size: 20px;">A wedding planner is a professional who assists with the design,
+            planning and
+            management of a client's wedding. Weddings are significant events in people's lives and as such, couples are
+            often willing to spend considerable amount of money to ensure that their weddings are well-organized.Also
+            known as bridal or wedding consultants, wedding planners are responsible for assisting clients in planning
+            entire weddings or specific wedding activities. They discuss wedding logistics with clients, negotiate
+            vendor contracts, and ensure that wedding-day activities run smoothly.</P>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container aboutcontent mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="content">
+          <h3>Our Wedding Planning Adventure</h3>
+          <h4>Ideas & Inspiration</h4>
+          <p>Collect And Organize Ideas.</p>
+          <p>Connect to Vendors.</p>
+          <p>Get Wedding Tips.</p>
+
+          <h4>Collect & Organize Ideas</h4>
+          <p>Organize Wedding Planning.</p>
+          <p>Customize Categories.</p>
+          <p>All Your Favourites In One Place.</p>
+
+          <h4>Registries</h4>
+          <p>Add Registries To Your Wedding Website.</p>
+          <p>Find Unique Registry Gift Ideas.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul id="imageGallery">
+          <li data-thumb="images/wedding.jpg" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="images/wedding.jpg" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+          <li data-thumb="images/flowers.jpg" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="images/flowers.jpg" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+          <li data-thumb="17.jpg" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="17.jpg" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+          <li data-thumb="images/aboutslider.webp" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="images/aboutslider.webp" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+          <li data-thumb="19.jpg" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="19.jpg" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+          <li data-thumb="images/aboutslider1.webp" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="images/aboutslider1.webp" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+          <li data-thumb="images/aboutslider2.jpeg" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="images/aboutslider2.jpeg" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+          <li data-thumb="21.jpg" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="21.jpg" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+          <li data-thumb="images/slider.jpg" data-src="images/mr and mrs.jpg">
+            <div class="img">
+              <img src="images/slider.jpg" width="100%" height="400px" style="object-fit: cover;" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <section id="fact" class="fact mt-5">
+    <div class="container-fluid counter" style="margin-top: 50px;">
+      <div class="row">
+        <div class="col1">
+          <div class="flower text-center"><img src="images/flower.png" alt="" height="100px"></div>
+          <h1 class="text-center" style="color: rgb(105, 17, 48);"> <u>OUR COMPANY FACTS</u> </h1>
+        </div>
+        <div class="factcol mt-4">
+          <div id="counter">
+            <div class="box text-center">
+              <div class="counter-value" data-count="6000" style="font-size: 40px;"> <b>0</b></div>
+              <h2 class="text-center" style="font-size: 30px;">WEDDINGS</h2>
+            </div>
+            <div class="box text-center">
+              <div class="counter-value" data-count="1000" style="font-size: 40px;">0</div>
+              <h2 class="text-center" style="font-size: 30px;">PARTIES</h2>
+            </div>
+            <div class="box text-center">
+              <div class="counter-value" data-count="1500" style="font-size: 40px;">0</div>
+              <h2 class="text-center" style="font-size: 30px;">EVENTS</h2>
+            </div>
+            <div class="box text-center">
+              <div class="counter-value" data-count="1000" style="font-size: 40px;">0</div>
+              <h2 class="text-center" style="font-size: 30px;">REGISTERED</h2>
+            </div>
+            <div class="box text-center">
+              <div class="counter-value" data-count="1500" style="font-size: 40px;">0</div>
+              <h2 class="text-center" style="font-size: 30px;">HAPPY CLIENTS</h2>
+            </div>
+            <div class="box text-center">
+              <div class="counter-value" data-count="4000" style="font-size: 40px;">0</div>
+              <h2 class="text-center" style="font-size: 30px;">RECEPTION</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="event" class="event mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="info">
+          <div class="flower"><img src="images/flower.png" alt="" height="100px"></div>
+          <h2 style="color: rgb(105, 17, 48);"> <u>EVENT ATTRACTIONS</u> </h2>
+          <p style="font-size: 20px;">The most common form of entertainment for any wedding is the all-time favourites
+            are here!</p>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="images/dj.jpg" width="100%" alt="">
+            <div class="hover">
+              <h2 class="text-center" style="color: white; font-size: 25px;"> <U>DJ</U> </h2>
+              <p class="text-center" style="color: white; font-size: 20px;">The most common form of entertainment for
+                any wedding is the all-time favourite- a DJ. Music is the backbone for any event and keeps the spirit of
+                the party to the maximum. Arranging a DJ night is pretty easy. With tons of vendors in the market or the
+                in-house DJs of any banquet hall, you may easily arrange to have one at your wedding.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="images/Fireworks.webp" width="100%" alt="">
+            <div class="hover">
+              <h2 class="text-center" style="color: white; font-size: 25px;"> <U>FIRE WORKS</U> </h2>
+              <p class="text-center" style="color: white; font-size: 20px;">The liveliness of any grand event could be
+                profusely enhanced when you have arranged fireworks for your guests.Everybody loves a dramatic display
+                and having a firework as a part of your wedding celebration will help in this regard. Make sure that you
+                display the fireworks under proper security.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="images/entry.webp" width="100%" alt="">
+            <div class="hover">
+              <h2 class="text-center" style="color: white; font-size: 25px;"> <U> GRAND ENTRY</U></h2>
+              <p class="text-center" style="color: white; font-size: 19px;"> It's all about having a grand entry for the
+                couple. You can arrange for some interesting entrances that are different from the traditional ones.Your
+                exquisite entry could be a real fun for you as well as for your guests. You would be astonished to know
+                that there are different castes in India where the entry of the groom is a creative one based on some
+                story and the tradition has been carried for a long time as well.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="event" class="event mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="images/dance.webp" width="100%" alt="">
+            <div class="hover">
+              <h2 class="text-center" style="color: white; font-size: 25px;"> <U>DANCE FLOOR</U> </h2>
+              <p class="text-center" style="color: white; font-size: 20px;">A simple dance floor is not going to entice
+                your guests to start their dance.Blame it on their fancy footwear! Try out some innovative lightning
+                that will spruce up and enhance the look of the dance floor. You may even add some props for the guests,
+                specifically the kids to enjoy the dancing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="images/Live-bands.jpg" width="100%" alt="">
+            <div class="hover">
+              <h2 class="text-center" style="color: white; font-size: 25px;"> <U>LIVE BANDS</U> </h2>
+              <p class="text-center" style="color: white; font-size: 20px;">It’s not just about a chaat corner or salad
+                bar anymore. Your guests would definitely look around for something different and interesting that was
+                not the prodigy for any wedding occasion before. If yours is a winter wedding, then setting up a coffee
+                station would do the trick of making your occasion a successful one.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photo">
+            <img src="images/candy cofee.webp" width="100%" alt="">
+            <div class="hover">
+              <h2 class="text-center" style="color: white; font-size: 25px;"> <U>CANDY & COFEE STATION</U> </h2>
+              <p class="text-center" style="color: white; font-size: 19px;"> It's all about having a grand entry for the
+                couple. You can arrange for some interesting entrances that are different from the traditional ones.Your
+                exquisite entry could be a real fun for you as well as for your guests. You would be astonished to know
+                that there are different castes in India where the entry of the groom is a creative one based on some
+                story and the tradition has been carried for a long time as well.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" class="packages mt-5">
+    <div class="container">
+      <div class="row" style="display: flex; justify-content: space-evenly; align-items: center;">
+        <h1 class="text-center" style="color: rgb(105, 17, 48);"> <u>WEDDING STYLE & PRICING</u> </h1>
+        <div class="col-md-5 mt-5">
+          <div id="my" class="content1">
+            <h2 class="text-center"> <U>VINTAGE WEDDING</U> </h2>
+            <h3 class="text-center"><b>$550.99</b> </h3>
+
+            <p>Wedding Decoration</p>
+            <p>Florist Services</p>
+            <p>Bridal Cortege</p>
+            <p>Dinner</p>
+            <p>Wedding Portfolio</p>
+            <p>Music & Phots</p>
+            <p>Venue</p>
+            <P>Invitation Card</P>
+            <div class="text-center">
+              <a href="vintage.html"><button class="text-center"
+                  style="font-size: 30px;  background: rgb(105, 17, 48); padding: 5px; color:black;">Click
+                  Me</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 mt-5">
+          <div id="my" class="content1" style=" background: linear-gradient(rgba(160, 114, 114, 0.5) ,rgba(0,0,0,0.5)),url(images/rustic.jpg);
+             background-size: cover; height: 500px;">
+            <h2 class="text-center"> <U>RUSTIC WEDDING</U> </h2>
+            <h3 class="text-center"><b>$690.99</b> </h3>
+
+            <p>Wedding Decoration</p>
+            <p>Florist Services</p>
+            <p>Bridal Cortege</p>
+            <p>Dinner</p>
+            <p>Wedding Portfolio</p>
+            <p>Music & Phots</p>
+            <p>Venue</p>
+            <P>Invitation Card</P>
+            <div class="text-center">
+              <a href="rustic.html"><button class="text-center"
+                  style="font-size: 30px; color: black; background: rgb(105, 17, 48); padding: 5px;">Click
+                  Me</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="packages" class="packages mt-5">
+    <div class="container">
+      <div class="row" style="display: flex; justify-content: space-evenly; align-items: center;">
+        <div class="col-md-5 mt-5">
+          <div id="my" class="content1" style=" background: linear-gradient(rgba(160, 114, 114, 0.5) ,rgba(0,0,0,0.5)),url(images/beach.webp);
+            background-size: cover; height: 500px;">
+            <h2 class="text-center"> <U>BEACH WEDDING</U> </h2>
+            <h3 class="text-center"><b>$990.99</b> </h3>
+
+            <p>Wedding Decoration</p>
+            <p>Florist Services</p>
+            <p>Bridal Cortege</p>
+            <p>Dinner</p>
+            <p>Wedding Portfolio</p>
+            <p>Music & Phots</p>
+            <p>Venue</p>
+            <P>Invitation Card</P>
+            <div class="text-center">
+              <a href="beach.html"><button class="text-center"
+                  style="font-size: 30px; color: black; background: rgb(105, 17, 48); padding: 5px;">Click
+                  Me</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 mt-5">
+          <div id="my" class="content1" style=" background: linear-gradient(rgba(160, 114, 114, 0.5) ,rgba(0,0,0,0.5)),url(images/indoor2.jpg);
+             background-size: cover; height: 500px;">
+            <h2 class="text-center"> <U>INDOOR WEDDING</U> </h2>
+            <h3 class="text-center"><b>$600.99</b> </h3>
+
+            <p>Wedding Decoration</p>
+            <p>Florist Services</p>
+            <p>Bridal Cortege</p>
+            <p>Dinner</p>
+            <p>Wedding Portfolio</p>
+            <p>Music & Phots</p>
+            <p>Venue</p>
+            <P>Invitation Card</P>
+            <div class="text-center">
+              <a href="indoor.html"><button class="text-center"
+                  style="font-size: 30px; background: rgb(105, 17, 48); padding: 5px; color: black">Click
+                  Me</button></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery mt-5">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center" style="color: rgb(105, 17, 48);"> <u>OUR PORTFOLIO</u> </h1>
+        <div class="col-md-4 mt-3">
+          <div class="gdiv">
+            <img src="images/gallery1.jpeg" width="100%" height="280px" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-3">
+          <div class="gdiv">
+            <img src="images/gallery2.jpg" width="100%" height="280px" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-3">
+          <div class="gdiv">
+            <img src="images/gallery3.jpg" width="100%" height="280px" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="gallery mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="gdiv">
+            <img src="images/gallery4.jpg" width="100%" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gdiv">
+            <img src="images/gallery5.jpg" width="100%" height="280px" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gdiv">
+            <img src="images/gallery6.jpg" width="100%" height="280px" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="gallery mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="gdiv">
+            <img src="images/gallery8.jpg" width="100%" height="280px" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gdiv">
+            <img src="images/gallery11.h" width="100%" height="280px" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="gdiv">
+            <img src="images/rosecouple.png" width="100%" height="280px" alt="">
+            <div class="overlay">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="review" class="review mt-5">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center" style="color: rgb(105, 17, 48);"> <u>CLIENT REVIEWS</u> </h1>
+        <div class="col-md-4">
+          <i style="font-size: 40px; color:grey;" class="bi bi-quote"></i>
+          <p>'So many people have told us that our wedding was the most beautiful wedding that they’ve ever attended.
+            Everything was just stunning, and your flower arrangers were really talented. Thank you!'</p>
+          <img style="border-radius: 50%; height: 100px;" src="images/r1.jpg" alt=""> &nbsp; &nbsp;<span>RANDY
+            BLUE</span>
+        </div>
+        <div class="col-md-4">
+          <i style="font-size: 40px; color:grey;" class="bi bi-quote"></i>
+          <p>'Thank you so much for the fabulous job you did helping our wedding be the best it could be. We had the
+            time of our lives! I enjoyed the day so much more knowing you had our backs. Much love!'</p>
+          <img style="border-radius: 50%; height: 100px;" src="images/r2.jpg" alt=""> &nbsp; &nbsp;<span>MARK
+            OTTO</span>
+        </div>
+        <div class="col-md-4">
+          <i style="font-size: 40px; color:grey;" class="bi bi-quote"></i>
+          <p>'Thank you for being such a perfect wedding planner! Everything went so smoothly and we had the most
+            wonderful day. Working with you was a pleasure and it took much of the stress out of the planning process.'
+          </p>
+          <img style="border-radius: 50%; height: 100px;" src="images/r3.jpg" alt=""> &nbsp; &nbsp;<span>STEPHANIE
+            HENRY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="service mt-5">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center" style="color: rgb(105, 17, 48);"> <u>OUR SERVICES</u> </h1>
+        <div class="col-md-3 mt-5"><img src="images/service1.jpg" width="100%" alt="">
+          <h2 class="text-center">PLANNING</h2>
+        </div>
+        <div class="col-md-3 mt-5"><img src="images/service2.jpg" width="100%" alt="">
+          <h2 class="text-center">VENUE</h2>
+        </div>
+        <div class="col-md-3 mt-5"><img src="images/service3.jpg" width="100%" alt="">
+          <h2 class="text-center">MAKE OVER</h2>
+        </div>
+        <div class="col-md-3 mt-5"> <img src="images/service4.jpg" width="100%" alt="">
+          <h2 class="text-center">FLOWERS</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="service" class="service mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"><img src="images/service-5.jpg" width="100%" height="215px" alt="">
+          <h2 class="text-center">PHOTOGRAPHY</h2>
+        </div>
+        <div class="col-md-3"><img src="images/service6.jpg" width="100%" alt="">
+          <h2 class="text-center">JEWELLERY</h2>
+        </div>
+        <div class="col-md-3"><img src="images/service7.jpg" width="100%" alt="">
+          <h2 class="text-center">CLOTHES</h2>
+        </div>
+        <div class="col-md-3"> <img src="images/service8.jpg" width="100%" alt="">
+          <h2 class="text-center">CAKE</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="team" class="team mt-5">
+    <div class="container">
+      <h1 class="text-center mt-5" style="color: rgb(105, 17, 48);"> <u>MEET OUR TEAM</u> </h1>
+      <P class="text-center" style="font-size: 20px;"> Our team also known as bridal or wedding consultants, wedding
+        planners are
+        responsible for assisting clients in planning entire weddings or specific wedding activities. They discuss
+        wedding logistics with clients, negotiate vendor contracts, and ensure that wedding-day activities run
+        smoothly.</P>
+
+      <div class="row" data-aos="fade-up-right" data-aos-duration="3000">
+
+        <div class="col-md-4 mt-5">
+          <img style="border-radius: 50%; height: 200px; width: 50%;" src="images/team3.webp" alt="">
+          <h3 class="text-center">MUBASHIRA</h3>
+          <p class="text-center">WEDDING PLANNER</p>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-whatsapp"></i>
+
+
+
+        </div>
+        <div class="col-md-4 mt-5">
+          <img style="border-radius: 50%; height: 200px; width: 50%;" src="images/team2.webp" alt="">
+          <h3 class="text-center">AQSA</h3>
+          <p class="text-center">PHOTOGRAPHER</p>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-whatsapp"></i>
+
+        </div>
+
+        <div class="col-md-4 mt-5">
+          <img style="border-radius: 50%; height: 200px; width: 50%;" src="images/team1.webp" alt="">
+          <h3 class="text-center">BISMA</h3>
+          <p class="text-center">MANAGER</p>
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-whatsapp"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="partner" class="partner mt-5">
+    <div class="container-fluid partnercol" style="margin-top: 20px;">
+      <div class="row">
+        <div class="col-md-3 ptcol" style="object-fit: cover;"><img src="images/partner1.webp" width="100%" alt="">
+        </div>
+        <div class="col-md-3 ptcol" style="object-fit: cover;"><img src="images/partner2.jpg" width="100%" alt=""></div>
+        <div class="col-md-3 ptcol" style="object-fit: cover;"> <img src="images/partner3.jpeg" width="100%" alt="">
+        </div>
+        <div class="col-md-3 ptcol" style="object-fit: cover;"><img src="images/partner4.jpg" width="100%" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact mt-5">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center" style="color: rgb(105, 17, 48);"><u>CONTACT US</u></h1>
+        <div class="col text-center mt-5"><iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.139305480815!2d67.03085831514016!3d24.927323848713097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f90157042d3%3A0x93d609e8bec9a880!2sAptech%20Computer%20Education%20North%20Nazimabad%20Center!5e0!3m2!1sen!2s!4v1654887684167!5m2!1sen!2s"
+            width="900" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+      <div class="container text-center content mt-5">
+        <button class="read">
+          <a style="text-decoration: none; font-size: 30px;padding: 10px; color: rgb(105, 17, 48);" href="#"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">REACH US!</a>
+        </button>
+
+        <!-- Modal -->
+
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-5" style="padding-top: 20%;  background: rgba(160, 114, 114, 0.5);">
+                  <img src="images/rosecouple.png" width="100%" height="300px" alt="">
+                </div>
+                <div class="col-md-7 rightform" style=" background: rgba(202, 143, 143, 0.5);">
+                  <h3 class="text-center">
+                    <u> WEDDING PLANNER FORM</u>
+                  </h3>
+                  <p class="text-center"> Thank You for choosing your special event.We have over 25 years of Experience
+                    in Excellence & Elegancy in all types of events and are proud to bring our experience to your
+                    Special day.Please fill out this form and have it back to us 2 Weeks before the Event. </p>
+                  <form action="">
+                    <div class="mt-2">
+                      <input type="text" placeholder="Enter Your Name">
+                    </div>
+                    <div class="mt-2">
+                      <input type="text" placeholder="Enter Your Event Name">
+                    </div>
+                    <h5>Enter Your Wedding Date And Month</h5>
+                    <div class="mt-2" style="display: flex; justify-content: space-around; align-items: center; ">
+                      <input type="date" placeholder="Enter Your Wedding Date">
+                      <input type="month" placeholder="Enter Your Wedding Month">
+                    </div>
+                    <div class="mt-2">
+                      <input type="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="mt-2">
+                      <h5>Accss to Venue for SetUp Time</h5>
+                      <input type="time" placeholder="">
+                    </div>
+                    <div class="mt-2">
+                      <h5>Wedding Theme</h5>
+                      <input type="color" placeholder="">
+                    </div>
+                    <h5>Capacity of Venue & Number of Guests </h5>
+                    <div class="mt-2" style="display: flex; justify-content: space-around; align-items: center; ">
+                      <input type="text" placeholder="">
+                      <input type="number" placeholder="">
+                    </div>
+                    <h5>Category of Venue </h5>
+                    <div class="mt-2" style="display: flex;  align-items: center; ">
+                      <label for="">Indoor</label> <input type="radio">
+                      <label for="">Outdoor</label> <input type="radio">
+                    </div>
+                    <input type="submit" class="mt-2">
+                  </form>
+
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <section id="faq" class="faq mt-5" style="font-size: 20px;">
+      <div class="container">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                style="font-size: 25px;">
+                Will the ceremony and reception be indoors or outdoors?
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"> It’s important for guests to know if they will be indoors or outdoors so they
+                can plan accordingly. Guests may need to bring sunscreen or wear different shoes.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                style="font-size: 25px;">
+                Will food and drinks be served at the reception? What kind of food?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"> Notify your guests ahead of time whether or not food and drinks will be
+                served
+                and what type of food for example whether it’s appetizers or a full sit down meal.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"
+                style="font-size: 25px;">
+                I still have questions, what is the best way to contact you?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"> Your guests may still have a few questions after going through your wedding
+                website FAQ, let them know the best way to reach you or your wedding planner.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+
+          </div>
+          <div class="col-md-2" style="text-decoration: none; text-align: center; ">
+            <div class="link">
+              <div class="flower"><img src="images/flower.png" alt="" height="50px">
+                <h3>LINK</h3>
+              </div>
+
+              <div style="padding: 5px;"> <a href="#navbar"
+                  style="text-decoration: none;color: black ; font-size: 20px;">
+                  Home</a></div>
+              <div style="padding: 5px;"><a href="#about" style="text-decoration: none; color: black; font-size: 20px;">
+                  About Us</a></div>
+              <div style="padding: 5px;"> <a href="#event"
+                  style="text-decoration: none; color: black; font-size: 20px;">
+                  Events</a></div>
+              <div style="padding: 5px;"><a href="#packages"
+                  style="text-decoration: none; color: black; font-size: 20px;">
+                  Wedding Style & pricing</a></div>
+              <div style="padding: 5px;"><a href="#team" style="text-decoration: none; color: black; font-size: 20px;">
+                  Team</a></div>
+              <div style="padding: 5px;"><a href="#service"
+                  style="text-decoration: none; color: black; font-size: 20px;">Services</a></div>
+              <div style="padding: 5px;"><a href="#partner"
+                  style="text-decoration: none; color: black; font-size: 20px;">Partners</a></div>
+              <div style="padding: 5px;"><a href="#contact"
+                  style="text-decoration: none; color: black; font-size: 20px;">Contact Us</a></div>
+
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="information">
+              <div class="flower text-center"><img src="images/flower.png" alt="" height="50px">
+                <h3>CONTACT INFORMATION</h3>
+              </div>
+              <div style="text-align: center; margin: 20px; font-size: 20px;"><i
+                  class="bi bi-geo-alt-fill"><span>Karachi,Pakistan</span></i><br><br>
+                <i class="bi bi-telephone-fill"><span>111-828-5</span>
+                  <p>132-659-2</p>
+                </i>
+                <i class="bi bi-whatsapp"><span>0332-5438086</span></i><br>
+                <i class="bi bi-envelope-fill"><span>planner12@outlook.com</span></i><br><br>
+                <div class="text-center"
+                  style="display: flex; justify-content: center;  align-items: center; gap: 25px;"> <i
+                    class="bi bi-facebook" style="color: blue;"></i><span><i class="bi bi-twitter"
+                      style="color: blue;"></i></span><span><i class="bi bi-google"
+                      style="color: blue;"></i></span><span><i class="bi bi-youtube"
+                      style="color: red;"></i></span><span><i class="bi bi-telephone-fill"
+                      style="color: whitesmoke;"></i></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="hours">
+              <div class="flower text-center"><img src="images/flower.png" alt="" height="50px">
+                <h3>OPENING HOURS</h3>
+              </div>
+              <div style="text-align: center;"> <i class="bi bi-stopwatch-fill"><span>MON-TUE</span></i>
+                <p>11:00 AM To 11:00 PM</p>
+                <hr style="text-decoration: dotted;">
+
+                <i class="bi bi-stopwatch-fill"><span>WED-THU</span></i>
+                <p>1:00 PM To 11:00 PM</p>
+                <hr style="text-decoration: dotted;">
+
+                <i class="bi bi-stopwatch-fill"><span>FRI-SAT</span></i>
+                <p>3:00 PM To 11:00 PM</p>
+                <hr style="text-decoration: dotted;">
+                <i class="bi bi-stopwatch-fill"><span>SUN</span></i>
+                <p>CLOSED</p>
+                <hr style="text-decoration: dotted;">
+              </div>
+
+            </div>
+          </div>
+         
+    </footer>
+    <div class="container-fluid bg-dark" style="height: 30px; color: white; text-align: center; font-size: 18px;">
+      <i class="fa-solid fa-copyright"><span>All Rights Reserved Terms Of Use and Privacy Policy!</span></i>
+    </div>
+  </section>
+
+</body>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="lightslider-master/dist/js/lightslider.min.js"></script>
+<script src="lightGallery-master/dist/lightgallery.min.js"></script>
+<script> $(document).ready(function () {
+    $('#imageGallery').lightSlider({
+      gallery: true,
+      item: 1,
+      loop: true,
+      thumbItem: 9,
+      slideMargin: 0,
+      enableDrag: false,
+      currentPagerPosition: 'left',
+
+    });
+  });</script>
+<script>
+  var a = 0;
+  $(window).scroll(function () {
+
+    var oTop = $('#counter').offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+      $('.counter-value').each(function () {
+        var $this = $(this),
+          countTo = $this.attr('data-count');
+        $({
+          countNum: $this.text()
+        }).animate({
+          countNum: countTo
+        },
+
+          {
+
+            duration: 2000,
+            easing: 'swing',
+            step: function () {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+              $this.text(this.countNum);
+              //alert('finished');
+            }
+
+          });
+      });
+      a = 1;
+    }
+
+  });
+</script>
+<script src="aos-master/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</html>
